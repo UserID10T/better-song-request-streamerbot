@@ -1,0 +1,87 @@
+/* Responsive wide-banner refinements for the Now Playing widget. */
+body.now-playing-widget-page .now-playing-card {
+    container-type: inline-size;
+}
+
+body.now-playing-widget-page .np-card-cover {
+    object-fit: contain !important;
+    object-position: center center !important;
+    background: #080b0c !important;
+}
+
+/* The stock card is optimized as a wide, short banner rather than a tall card. */
+body.now-playing-widget-page .now-playing-card:not(.has-custom-layout) {
+    grid-template-columns: 23% minmax(0, 1fr) !important;
+    grid-template-rows: 1fr 0 !important;
+    gap: 0 !important;
+    min-height: 0 !important;
+    padding: 5% 1.5% !important;
+}
+
+body.now-playing-widget-page .now-playing-card:not(.has-custom-layout) .np-card-cover {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 6px !important;
+}
+
+body.now-playing-widget-page .now-playing-card:not(.has-custom-layout) .np-card-info {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin-left: 2.5% !important;
+    height: 62% !important;
+    align-self: start !important;
+    padding: 2.5% 3% !important;
+    box-sizing: border-box !important;
+}
+
+body.now-playing-widget-page .now-playing-card:not(.has-custom-layout) .np-card-title {
+    font-size: clamp(20px, 4cqw, 58px) !important;
+    line-height: 1.05 !important;
+    padding-right: 0 !important;
+    white-space: normal !important;
+    overflow: hidden !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    text-overflow: clip !important;
+    display: grid !important;
+    align-items: center !important;
+    justify-items: start !important;
+    min-width: 0 !important;
+}
+
+body.now-playing-widget-page .now-playing-card:not(.has-custom-layout) .np-card-author {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+body.now-playing-widget-page .now-playing-card:not(.has-custom-layout) .np-card-meter {
+    position: absolute !important;
+    left: 25.5% !important;
+    right: 1.5% !important;
+    top: 64% !important;
+    height: 25% !important;
+    box-sizing: border-box !important;
+    padding: 0 2% !important;
+}
+
+body.now-playing-widget-page .now-playing-card:not(.has-custom-layout) .np-card-progress {
+    left: 25.5% !important;
+    right: 1.5% !important;
+    bottom: 2% !important;
+    height: 3% !important;
+}
+
+body.now-playing-widget-page .now-playing-card:not(.has-custom-layout) .np-card-user {
+    right: 2% !important;
+    top: 8% !important;
+    max-width: 24% !important;
+}
+
+body.now-playing-widget-page .now-playing-card:not(.has-custom-layout) .np-card-sr-status {
+    right: 2% !important;
+    top: 8% !important;
+    max-width: 14% !important;
+}
